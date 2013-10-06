@@ -27,11 +27,11 @@ game.PlayerEntity = me.ObjectEntity.extend({
         //this.ylimit = me.game.currentLevel.height;
 
         // set the display to follow our position on both axis
-        //me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
-        me.debug.renderHitBox = true;
+        me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
+        //me.debug.renderHitBox = true;
 		this.alwaysUpdate = true;
 		
-		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.HORIZONTAL);
+		//me.game.viewport.follow(this.pos, me.game.viewport.AXIS.HORIZONTAL);
     },
  
     /* -----
