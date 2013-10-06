@@ -49,7 +49,6 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.flipX(true);
             // update the entity velocity
             this.vel.x -= this.accel.x * me.timer.tick;
-            console.log(this);
             leftP = true;
         } else if (me.input.isKeyPressed('right')) {
         	this.renderable.setCurrentAnimation("walk");
@@ -58,7 +57,6 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.flipX(false);
             // update the entity velocity
             this.vel.x += this.accel.x * me.timer.tick;
-            console.log(this);
             leftP = false;
         } else {
         	this.renderable.setCurrentAnimation("stand");
@@ -81,7 +79,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
         
         if (me.input.isKeyPressed('shoot')) {
-        	shot = new bullet(this.pos.x, this.pos.y+40, leftP);
+        	shot = new bullet(this.pos.x, this.pos.y+20, leftP);
             me.game.add(shot, this.z);
             me.game.sort();
             //me.game.HUD.updateItemValue("score", -1);
