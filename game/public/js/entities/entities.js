@@ -51,7 +51,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 // set the jumping flag
                 this.jumping = true;
                 // play some audio 
-                me.audio.play("jump");
+                //me.audio.play("jump");
             }
  
         }
