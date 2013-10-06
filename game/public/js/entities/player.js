@@ -16,9 +16,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(4, 17);
-        this.updateColRect(0, 50, -6, 92);
+        this.updateColRect(10, 29, 0, 86);
         
-        this.renderable.addAnimation("stand", [0, 1, 2]);
+        this.renderable.addAnimation("stand", [0, 1, 2], 30);
         this.renderable.addAnimation("walk", [8, 9, 10, 11, 12, 13, 14, 15]);
         
         this.renderable.setCurrentAnimation("stand");
@@ -28,7 +28,10 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
-        me.debug.renderHitBox = true;
+        //me.debug.renderHitBox = true;
+		this.alwaysUpdate = true;
+		
+		//me.game.viewport.follow(this.pos, me.game.viewport.AXIS.HORIZONTAL);
     },
  
     /* -----
@@ -54,6 +57,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.vel.x += this.accel.x * me.timer.tick;
         } else {
         	this.renderable.setCurrentAnimation("stand");
+        	this.parent();
             this.vel.x = 0;
         }
         
@@ -106,15 +110,15 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
  
         // update animation if necessary
-        if (this.vel.x!=0 || this.vel.y!=0) {
+        //if (this.vel.x!=0 || this.vel.y!=0) {
             // update object animation
             this.parent();
             return true;
-        }
+        //}
          
         // else inform the engine we did not perform
         // any update (e.g. position, animation)
-        return false;
+        //return false;
     }
  
 });
