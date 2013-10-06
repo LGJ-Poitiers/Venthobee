@@ -3,6 +3,9 @@ game.resources = [
 	// title screen
     {name: "title",  type:"image", src: "data/img/gui/title.png"},
     
+    // sky
+    {name: "Sky",  type:"image", src: "data/img/sprite/sky.png"},
+    
     // level tileset
     {name: "lvl1",  type:"image", src: "data/img/map/lvl1.png"},
      
@@ -21,11 +24,6 @@ game.resources = [
      * Bullet
      */
     {name: "bullet", type:"image", src: "data/img/sprite/sweet_note.gif"},
-    
-	/* Sound effects. 
-	 *
-	 */
-	 {name: "jump", type: "audio", src: "data/sfx/", channel : 2},
 	 
     //font
     {name: "32x32_font", type:"image", src: "data/img/font/32x32_font.png"},
