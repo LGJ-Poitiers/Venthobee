@@ -1,11 +1,11 @@
 /* --------------------------
 an enemy Entity
 ------------------------ */
-game.note = me.ObjectEntity.extend({
+game.Note = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         // define this here instead of tiled
-        settings.image = "note";
-        settings.spritewidth = 64;
+        settings.image = "hero";
+        settings.spritewidth = 50;
  
         // call the parent constructor
         this.parent(x, y, settings);
