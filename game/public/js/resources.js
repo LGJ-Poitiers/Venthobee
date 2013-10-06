@@ -35,7 +35,10 @@ game.resources = [
 	/* Background music. 
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
-	 */	
+	 */
+    
+    // our enemty entity
+    {name: "note", type:"image", src: "data/img/sprite/hero_walk.png"},
 	
 	/* Sound effects. 
 	 *
