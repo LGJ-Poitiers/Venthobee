@@ -19,7 +19,7 @@ game.resources = [
     {name: "hero", type:"image", src: "data/img/sprite/hero.png"},
     
     // Enemy
-    {name: "note", type:"image", src: "data/img/sprite/sweet_note.gif"},
+    {name: "note", type:"image", src: "data/img/sprite/sweet_note.png"},
     
     // Bullet
     {name: "bullet", type:"image", src: "data/img/sprite/bullet.png"},
