@@ -4,16 +4,9 @@ var bullet = me.ObjectEntity.extend({
     	
     	settings = {};
     	settings.image = 'bullet';
-    	//settings.spritewidth = 32;
     	
         this.parent(x, y, settings);
         this.collidable = true;
-        //this.accel = 2;
-        //this.gravity = -0.3;
-        //this.setVelocity(8, 10);
-        //this.vel.x = 0;
-		//this.doWalk(left);
-        //this.left = left;
         this.vel.x = leftP? - 18 : 18;
         this.flipX(!leftP);
         this.gravity = (Math.random()-0.5)*1.5;

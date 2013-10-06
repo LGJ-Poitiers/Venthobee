@@ -33,6 +33,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		this.alwaysUpdate = true;
 		
 		//me.game.viewport.follow(this.pos, me.game.viewport.AXIS.HORIZONTAL);
+		this.life = 1000;
     },
  
     /* -----
@@ -112,6 +113,11 @@ game.PlayerEntity = me.ObjectEntity.extend({
      
                 } else {
                     // let's flicker in case we touched an enemy
+                    
+                    this.life -= 20;
+                    if (this.life <= 0) {
+                    	me.game.remove(this);
+                    }
                     this.renderable.flicker(45);
                 }
             }
