@@ -6414,9 +6414,9 @@ window.me = window.me || {};
 			me.video.clearSurface(context, "black");
 			
 			// draw the melonJS logo
-			this.logo1.draw(context, 'melon', xpos , ypos);
+			//this.logo1.draw(context, 'melon', xpos , ypos);
 			xpos += logo1_width;
-			this.logo2.draw(context, 'JS', xpos, ypos);
+			//this.logo2.draw(context, 'JS', xpos, ypos);
 			
 			ypos += this.logo1.measureText(context, "melon").height / 2;
 

@@ -1,44 +1,41 @@
 game.resources = [
 
-	/**
-     * Graphics.
-     */
-    // our level tileset
+	// title screen
+    {name: "win",  type:"image", src: "data/img/gui/win.png"},
+    
+    // title screen
+    {name: "loose",  type:"image", src: "data/img/gui/loose.png"},
+
+	// title screen
+    {name: "title",  type:"image", src: "data/img/gui/title.png"},
+    
+    // sky
+    {name: "Sky",  type:"image", src: "data/img/map/sky.png"},
+    
+    // town
+    {name: "town",  type:"image", src: "data/img/map/town.png"},
+    
+    // level tileset
     {name: "lvl1",  type:"image", src: "data/img/map/lvl1.png"},
      
-    /* 
-     * Maps. 
-     */
+    // map lvl1
     {name: "lvl1", type: "tmx", src: "data/map/lvl1.tmx"},
     
-    /*
-     * Hero
-     */
-    {name: "hero", type:"image", src: "data/img/sprite/hero.png"}
-    
-	/* Graphics. 
-	 * @example
-	 * {name: "example", type:"image", src: "data/img/example.png"},
-	 */
-	
-	/* Atlases 
-	 * @example
-	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
-	 */
-		
-	/* Maps. 
-	 * @example
-	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
-	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
- 	 */
+    // Hero
+    {name: "hero", type:"image", src: "data/img/sprite/hero.png"},
 
-	/* Background music. 
-	 * @example
-	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
-	 */	
+    // Enemies
+    {name: "darkNote", type:"image", src: "data/img/sprite/sweet_note.png"},
+    
+    // Coins
+    {name: "sweetNote", type:"image", src: "data/img/sprite/angry_empty_note.png"},
+    
+    // Bullet
+    {name: "bullet", type:"image", src: "data/img/sprite/bullet.png"},
+    
+    //font
+    {name: "32x32_font", type:"image", src: "data/img/font/32x32_font.png"},
 	
-	/* Sound effects. 
-	 * @example
-	 * {name: "example_sfx", type: "audio", src: "data/sfx/", channel : 2}
-	 */
+	// sound effect
+	{name: "jump", type: "audio", src: "data/sfx/", channel : 2}
 ];
