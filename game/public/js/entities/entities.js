@@ -14,9 +14,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.parent(x, y, settings);
  
         // set the default horizontal & vertical speed (accel vector)
-        this.setVelocity(5, 17);
+        this.setVelocity(4, 17);
         
-        //this.updateColRect(0, 34, -4, 90);
+        this.updateColRect(0, 50, -6, 92);
  
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
