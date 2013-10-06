@@ -33,6 +33,9 @@ var game = {
     "loaded" : function ()
 	{
 	   // set the "Play/Ingame" Screen Object
+	   me.state.set(me.state.MENU, new game.TitleScreen());
+	   
+	   // set the "Play/Ingame" Screen Object
 	   me.state.set(me.state.PLAY, new game.PlayScreen());
 	     
 	   // add our player entity in the entity pool
@@ -43,8 +46,12 @@ var game = {
 	   me.input.bindKey(me.input.KEY.LEFT,  "left");
 	   me.input.bindKey(me.input.KEY.RIGHT, "right");
 	   me.input.bindKey(me.input.KEY.UP,    "jump", true);
-	      
+	   me.input.bindKey(me.input.KEY.SPACE, "shoot");
+  
+	   // set a global fading transition for the screen
+	   me.state.transition("fade", "#000000", 250);
+    
 	   // start the game 
-	   me.state.change(me.state.PLAY);
+	   me.state.change(me.state.MENU);
 	}
 };

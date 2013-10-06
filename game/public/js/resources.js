@@ -1,48 +1,38 @@
 game.resources = [
 
-	/**
-     * Graphics.
-     */
-    // our level tileset
+	// title screen
+    {name: "title",  type:"image", src: "data/img/gui/title.png"},
+    
+    // level tileset
     {name: "lvl1",  type:"image", src: "data/img/map/lvl1.png"},
      
-    /* 
-     * Maps. 
-     */
+    // map lvl1
     {name: "lvl1", type: "tmx", src: "data/map/lvl1.tmx"},
     
-    /*
-     * Hero
-     */
+    //hero
     {name: "hero", type:"image", src: "data/img/sprite/hero.png"},
     
-	/* Graphics. 
-	 * @example
-	 * {name: "example", type:"image", src: "data/img/example.png"},
-	 */
-	
-	/* Atlases 
-	 * @example
-	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
-	 */
-		
-	/* Maps. 
-	 * @example
-	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
-	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
- 	 */
-
-	/* Background music. 
-	 * @example
-	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
-	 */
+    /*
+     *  Enemy
+     */
+    {name: "note", type:"image", src: "data/img/sprite/sweet_note.gif"},
     
-    // our enemty entity
-    {name: "note", type:"image", src: "data/img/sprite/sweet_note.png"},
-	
+    /*
+     * Bullet
+     */
+    {name: "bullet", type:"image", src: "data/img/sprite/sweet_note.gif"},
+    
 	/* Sound effects. 
 	 *
 	 */
-	 {name: "jump", type: "audio", src: "data/sfx/", channel : 2}
+	 {name: "jump", type: "audio", src: "data/sfx/", channel : 2},
 	 
+    //font
+    {name: "32x32_font", type:"image", src: "data/img/font/32x32_font.png"},
+ 
+    // our enemty entity
+    {name: "note", type:"image", src: "data/img/sprite/sweet_note.png"},
+	
+	// sound effect
+	{name: "jump", type: "audio", src: "data/sfx/", channel : 2}
 ];

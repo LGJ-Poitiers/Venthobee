@@ -32,7 +32,7 @@
   </data>
  </layer>
  <objectgroup name="Entity" width="41" height="17">
-  <object name="mainPlayer" x="1223" y="416" width="50" height="92">
+  <object name="mainPlayer" x="1253" y="416" width="50" height="92">
    <properties>
     <property name="flipX" value="true"/>
     <property name="image" value="hero"/>

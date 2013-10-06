@@ -20,7 +20,7 @@ game.Note = me.ObjectEntity.extend({
         this.walkLeft = true;
  
         // walking & jumping speed
-        this.setVelocity(4, 6);
+        this.setVelocity(2, 6);
  
         // make it collidable
         this.collidable = true;
