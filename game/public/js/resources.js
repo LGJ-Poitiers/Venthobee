@@ -37,9 +37,16 @@ game.resources = [
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
 	 */
     
-    // our enemty entity
+    /*
+     *  Enemy
+     */
     {name: "note", type:"image", src: "data/img/sprite/sweet_note.gif"},
-	
+    
+    /*
+     * Bullet
+     */
+    {name: "bullet", type:"image", src: "data/img/sprite/sweet_note.gif"},
+    
 	/* Sound effects. 
 	 *
 	 */

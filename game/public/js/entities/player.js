@@ -70,6 +70,13 @@ game.PlayerEntity = me.ObjectEntity.extend({
             }
  
         }
+        
+        if (me.input.isKeyPressed('shoot')) {
+        	shot = new bullet(this.pos.x, this.pos.y);
+            me.game.add(shot, this.z);
+            me.game.sort();
+            //me.game.HUD.updateItemValue("score", -1);
+    	}
  
         // check & update player movement
         this.updateMovement();
