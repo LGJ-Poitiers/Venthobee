@@ -14,7 +14,7 @@ game.resources = [
     /*
      * Hero
      */
-    {name: "hero", type:"image", src: "data/img/sprite/hero_walk.png"}
+    {name: "hero", type:"image", src: "data/img/sprite/hero_walk.png"},
     
 	/* Graphics. 
 	 * @example
