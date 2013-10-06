@@ -14,9 +14,17 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.parent(x, y, settings);
  
         // set the default horizontal & vertical speed (accel vector)
+<<<<<<< HEAD
         this.setVelocity(5, 21);
+=======
+        this.setVelocity(4, 17);
+>>>>>>> branch 'master' of https://github.com/LGJ-Poitiers/Venthobee.git
         
+<<<<<<< HEAD
         this.updateColRect(0, 34, -4, 90);
+=======
+        this.updateColRect(0, 50, -6, 92);
+>>>>>>> branch 'master' of https://github.com/LGJ-Poitiers/Venthobee.git
  
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
