@@ -14,11 +14,13 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.parent(x, y, settings);
  
         // set the default horizontal & vertical speed (accel vector)
-        this.setVelocity(3, 15);
+        this.setVelocity(5, 17);
+        
+        //this.updateColRect(0, 34, -4, 90);
  
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
- 
+        //me.debug.renderHitBox = true;
     },
  
     /* -----

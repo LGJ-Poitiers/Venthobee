@@ -9,13 +9,12 @@ game.resources = [
     /* 
      * Maps. 
      */
-    {name: "lvl1", type: "tmx", src: "data/map/lvl1.tmx"}
-    
+    {name: "lvl1", type: "tmx", src: "data/map/lvl1.tmx"},
     
     /*
      * Hero
      */
-    {name: "hero", type:"image", src: "data/img/sprite/hero.png"},
+    {name: "hero", type:"image", src: "data/img/sprite/hero.png"}
     
 	/* Graphics. 
 	 * @example
