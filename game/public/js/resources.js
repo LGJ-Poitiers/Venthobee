@@ -14,7 +14,7 @@ game.resources = [
     /*
      * Hero
      */
-    {name: "hero", type:"image", src: "data/img/sprite/hero.png"}
+    {name: "hero", type:"image", src: "data/img/sprite/hero_walk.png"}
     
 	/* Graphics. 
 	 * @example
@@ -38,7 +38,8 @@ game.resources = [
 	 */	
 	
 	/* Sound effects. 
-	 * @example
-	 * {name: "example_sfx", type: "audio", src: "data/sfx/", channel : 2}
+	 *
 	 */
+	 {name: "jump", type: "audio", src: "data/sfx/", channel : 2}
+	 
 ];
