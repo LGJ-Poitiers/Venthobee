@@ -14,9 +14,11 @@ var bullet = me.ObjectEntity.extend({
         //this.vel.x = 0;
 		//this.doWalk(left);
         //this.left = left;
-        this.vel.x = leftP? -18 : 18;
+        this.vel.x = leftP? - 18 : 18;
+        this.flipX(!leftP);
         this.gravity = (Math.random()-0.5)*1.5;
         this.startX = this.pos.x;
+        this.life = 100;
 
     },
 
@@ -30,6 +32,10 @@ var bullet = me.ObjectEntity.extend({
 		if (Math.abs(this.pos.x - this.startX) >= 400)
 			me.game.remove(this);
 		
+		this.life-=5;
+		if (this.life <= 0) {
+			me.game.remove(this);
+		}
 		//this.vel.y -= this.gravity;
 		
 		// check for collision
