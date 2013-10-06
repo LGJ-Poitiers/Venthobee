@@ -116,7 +116,11 @@ game.PlayerEntity = me.ObjectEntity.extend({
                     
                     this.life -= 20;
                     if (this.life <= 0) {
-                    	me.game.remove(this);
+                    	
+                       // display the game over screen
+                 	   me.state.change(me.state.MENU);
+                 	   // remove the player
+                 	   me.game.remove(this);
                     }
                     this.renderable.flicker(45);
                 }
