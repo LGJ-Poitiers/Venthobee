@@ -17,6 +17,9 @@ game.sweetNote = me.CollectableEntity.extend({
         this.renderable.setCurrentAnimation("stand");
        	 
         this.anchorPoint.set(0,0);
+        
+        // make it a enemy object
+        this.type = me.game.COLLECTABLE_OBJECT;
     },
  
     update: function() {

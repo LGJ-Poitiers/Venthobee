@@ -37,6 +37,10 @@ var bullet = me.ObjectEntity.extend({
         	if( res.obj.isSolid ){
                 me.game.remove(this); 
             }
+        	if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
+        		me.game.remove(this);
+                me.game.remove(res.obj);
+        	}
         	if (res.obj.type == me.game.ENEMY_OBJECT) {
         		me.game.remove(this);
                 me.game.remove(res.obj);
