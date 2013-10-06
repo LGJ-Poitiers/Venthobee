@@ -1,6 +1,7 @@
 /*------------------- 
 a player entity
 -------------------------------- */
+var leftP = true;
 game.PlayerEntity = me.ObjectEntity.extend({
  
     /* -----
@@ -48,6 +49,8 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.flipX(true);
             // update the entity velocity
             this.vel.x -= this.accel.x * me.timer.tick;
+            console.log(this);
+            leftP = true;
         } else if (me.input.isKeyPressed('right')) {
         	this.renderable.setCurrentAnimation("walk");
         
@@ -55,6 +58,8 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.flipX(false);
             // update the entity velocity
             this.vel.x += this.accel.x * me.timer.tick;
+            console.log(this);
+            leftP = false;
         } else {
         	this.renderable.setCurrentAnimation("stand");
         	this.parent();
@@ -76,7 +81,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
         
         if (me.input.isKeyPressed('shoot')) {
-        	shot = new bullet(this.pos.x, this.pos.y);
+        	shot = new bullet(this.pos.x, this.pos.y, leftP);
             me.game.add(shot, this.z);
             me.game.sort();
             //me.game.HUD.updateItemValue("score", -1);

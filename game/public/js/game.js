@@ -46,7 +46,7 @@ var game = {
 	   me.input.bindKey(me.input.KEY.LEFT,  "left");
 	   me.input.bindKey(me.input.KEY.RIGHT, "right");
 	   me.input.bindKey(me.input.KEY.UP,    "jump", true);
-	   me.input.bindKey(me.input.KEY.SPACE, "shoot");
+	   me.input.bindKey(me.input.KEY.SPACE, "shoot", true);
   
 	   // set a global fading transition for the screen
 	   me.state.transition("fade", "#000000", 250);
