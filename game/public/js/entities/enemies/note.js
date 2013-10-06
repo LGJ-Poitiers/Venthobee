@@ -4,8 +4,9 @@ an enemy Entity
 game.Note = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         // define this here instead of tiled
-        settings.image = "hero";
-        settings.spritewidth = 50;
+        settings.image = "note";
+        settings.spritewidth = 32;
+        settings.spriteheight = 50;
  
         // call the parent constructor
         this.parent(x, y, settings);

@@ -10,16 +10,25 @@ game.PlayerEntity = me.ObjectEntity.extend({
     ------ */
  
     init: function(x, y, settings) {
-        // call the constructor
+        settings.image = "hero";
+        
         this.parent(x, y, settings);
- 
+
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(4, 17);
-        this.updateColRect(0, 50, -6, 92);
- 
+        this.updateColRect(10, 29, 0, 87);
+        
+        this.renderable.addAnimation("stand", [0, 1, 2]);
+        this.renderable.addAnimation("walk", [8, 9, 10, 11, 12, 13, 14, 15]);
+        
+        this.renderable.setCurrentAnimation("stand");
+       	 
+        this.anchorPoint.set(0,0);
+        //this.ylimit = me.game.currentLevel.height;
+
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
-        //me.debug.renderHitBox = true;
+        me.debug.renderHitBox = true;
     },
  
     /* -----
@@ -30,18 +39,24 @@ game.PlayerEntity = me.ObjectEntity.extend({
     update: function() {
  
         if (me.input.isKeyPressed('left')) {
+        	this.renderable.setCurrentAnimation("walk");
+        
             // flip the sprite on horizontal axis
             this.flipX(true);
             // update the entity velocity
             this.vel.x -= this.accel.x * me.timer.tick;
         } else if (me.input.isKeyPressed('right')) {
+        	this.renderable.setCurrentAnimation("walk");
+        
             // unflip the sprite
             this.flipX(false);
             // update the entity velocity
             this.vel.x += this.accel.x * me.timer.tick;
         } else {
+        	this.renderable.setCurrentAnimation("stand");
             this.vel.x = 0;
         }
+        
         if (me.input.isKeyPressed('jump')) {
             // make sure we are not already jumping or falling
             if (!this.jumping && !this.falling) {
@@ -72,6 +87,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
                     this.vel.y = -this.maxVel.y * me.timer.tick;
                     // set the jumping flag
                     this.jumping = true;
+                    
+                    // remove enemy if jump on it
+                    me.game.remove(res.obj);
      
                 } else {
                     // let's flicker in case we touched an enemy
