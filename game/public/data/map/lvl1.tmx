@@ -46,10 +46,6 @@
   </data>
  </layer>
  <objectgroup name="Enemies" width="41" height="15">
-  <object name="note" x="643" y="284" width="337" height="93">
-   <properties>
-    <property name="spritewidth" value="320"/>
-   </properties>
-  </object>
+  <object name="Note" x="760" y="289" width="316" height="88"/>
  </objectgroup>
 </map>
