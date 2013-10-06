@@ -17,7 +17,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(4, 17);
-        this.updateColRect(10, 29, 0, 86);
+        this.updateColRect(10, 29, 4, 80);
         
         this.renderable.addAnimation("stand", [0, 1, 2], 30);
         this.renderable.addAnimation("walk", [8, 9, 10, 11, 12, 13, 14, 15]);
@@ -29,7 +29,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
-        //me.debug.renderHitBox = true;
+        me.debug.renderHitBox = true;
 		this.alwaysUpdate = true;
 		
 		//me.game.viewport.follow(this.pos, me.game.viewport.AXIS.HORIZONTAL);
@@ -73,7 +73,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 // set the jumping flag
                 this.jumping = true;
                 // play some audio 
-                //me.audio.play("jump");
+                me.audio.play("jump");
             }
  
         }
