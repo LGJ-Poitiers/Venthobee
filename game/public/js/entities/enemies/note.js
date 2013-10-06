@@ -5,7 +5,8 @@ game.Note = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         // define this here instead of tiled
         settings.image = "note";
-        settings.spritewidth = 50;
+        settings.spritewidth = 32;
+        settings.spriteheight = 50;
  
         // call the parent constructor
         this.parent(x, y, settings);
