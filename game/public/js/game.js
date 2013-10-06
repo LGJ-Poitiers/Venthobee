@@ -36,6 +36,12 @@ var game = {
 	   me.state.set(me.state.MENU, new game.TitleScreen());
 	   
 	   // set the "Play/Ingame" Screen Object
+	   me.state.set(me.state.LOOSE, new game.LooseScreen());
+	   
+	   // set the "Play/Ingame" Screen Object
+	   me.state.set(me.state.WIN, new game.WinScreen());
+	   
+	   // set the "Play/Ingame" Screen Object
 	   me.state.set(me.state.PLAY, new game.PlayScreen());
 	     
 	   // add our player entity in the entity pool
@@ -53,6 +59,6 @@ var game = {
 	   me.state.transition("fade", "#000000", 250);
     
 	   // start the game 
-	   me.state.change(me.state.MENU);
+	   me.state.change(me.state.PLAY);
 	}
 };

@@ -71,6 +71,23 @@
   <object name="darkNote" x="4224" y="448" width="192" height="64"/>
   <object name="darkNote" x="4640" y="352" width="160" height="64"/>
   <object name="darkNote" x="3168" y="448" width="192" height="64"/>
+  <object name="darkNote" x="2048" y="320" width="192" height="64"/>
+  <object name="darkNote" x="2016" y="320" width="192" height="64"/>
+  <object name="darkNote" x="2080" y="320" width="192" height="64"/>
+  <object name="darkNote" x="2048" y="320" width="224" height="64"/>
+  <object name="darkNote" x="1504" y="448" width="224" height="64"/>
+  <object name="darkNote" x="1600" y="448" width="224" height="64"/>
+  <object name="darkNote" x="1376" y="448" width="224" height="64"/>
+  <object name="darkNote" x="1184" y="448" width="224" height="64"/>
+  <object name="darkNote" x="1056" y="448" width="224" height="64"/>
+  <object name="darkNote" x="480" y="448" width="224" height="64"/>
+  <object name="darkNote" x="640" y="448" width="224" height="64"/>
+  <object name="darkNote" x="544" y="448" width="224" height="64"/>
+  <object name="darkNote" x="928" y="288" width="192" height="64"/>
+  <object name="darkNote" x="256" y="128" width="160" height="64"/>
+  <object name="darkNote" x="288" y="128" width="160" height="64"/>
+  <object name="darkNote" x="256" y="128" width="192" height="64"/>
+  <object name="darkNote" x="64" y="64" width="96" height="64"/>
  </objectgroup>
  <objectgroup name="Coins" width="162" height="37">
   <object name="sweetNote" x="1664" y="288" width="32" height="32"/>
@@ -78,5 +95,17 @@
   <object name="sweetNote" x="4544" y="288" width="32" height="32"/>
   <object name="sweetNote" x="4960" y="352" width="32" height="32"/>
   <object name="sweetNote" x="3872" y="160" width="32" height="32"/>
+  <object name="sweetNote" x="1344" y="192" width="32" height="32"/>
+  <object name="sweetNote" x="1376" y="192" width="32" height="32"/>
+  <object name="sweetNote" x="960" y="128" width="32" height="32"/>
+  <object name="sweetNote" x="992" y="128" width="32" height="32"/>
+  <object name="sweetNote" x="1024" y="128" width="32" height="32"/>
+  <object name="sweetNote" x="1056" y="128" width="32" height="32"/>
+  <object name="sweetNote" x="1088" y="128" width="32" height="32"/>
+  <object name="sweetNote" x="1120" y="128" width="32" height="32"/>
+  <object name="sweetNote" x="3040" y="96" width="32" height="32"/>
+  <object name="sweetNote" x="3104" y="96" width="32" height="32"/>
+  <object name="sweetNote" x="3072" y="96" width="32" height="32"/>
+  <object name="sweetNote" x="2784" y="160" width="32" height="32"/>
  </objectgroup>
 </map>
