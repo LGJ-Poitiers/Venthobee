@@ -14,7 +14,7 @@ var bullet = me.ObjectEntity.extend({
         //this.vel.x = 0;
 		//this.doWalk(left);
         //this.left = left;
-        this.vel.x = leftP? -20 : 20;
+        this.vel.x = leftP? -18 : 18;
         this.gravity = (Math.random()-0.5)*1.5;
         this.startX = this.pos.x;
 
@@ -27,7 +27,6 @@ var bullet = me.ObjectEntity.extend({
             me.game.remove(this);
 		}
 		
-		console.log(this.pos);
 		if (Math.abs(this.pos.x - this.startX) >= 400)
 			me.game.remove(this);
 		

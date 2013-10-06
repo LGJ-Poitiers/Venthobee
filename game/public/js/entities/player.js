@@ -79,7 +79,12 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
         
         if (me.input.isKeyPressed('shoot')) {
-        	shot = new bullet(this.pos.x, this.pos.y+20, leftP);
+        	if (leftP) {
+        		shot = new bullet(this.pos.x+0, this.pos.y+20, leftP);
+        	}
+        	else {
+        		shot = new bullet(this.pos.x+50, this.pos.y+20, leftP);
+        	}
             me.game.add(shot, this.z);
             me.game.sort();
             //me.game.HUD.updateItemValue("score", -1);
