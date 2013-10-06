@@ -14,7 +14,7 @@ var bullet = me.ObjectEntity.extend({
         //this.vel.x = 0;
 		//this.doWalk(left);
         //this.left = left;
-        this.vel.x = leftP? -20 : 20;
+        this.vel.x = leftP? -18 : 18;
         this.gravity = (Math.random()-0.5)*1.5;
         this.startX = this.pos.x;
 
@@ -35,12 +35,13 @@ var bullet = me.ObjectEntity.extend({
 		// check for collision
         var res = me.game.collide(this);
         if (res) {
-        	//if (res.obj.type != me.game.PLAYER) {
+        	if( res.obj.isSolid ){
+                me.game.remove(this); 
+            }
+        	if (res.obj.type == me.game.ENEMY_OBJECT) {
         		me.game.remove(this);
-	        	if (res.obj.type == me.game.ENEMY_OBJECT) {
-	                me.game.remove(res.obj);
-	        	}
-        	//}
+                me.game.remove(res.obj);
+        	}
             /*if (res.obj.type == me.game.CHOPPER || res.obj.type == me.game.TANK) {
 				//log points and play sound
                 console.log("bullet hit enemy");
