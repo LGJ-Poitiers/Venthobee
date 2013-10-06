@@ -16,7 +16,11 @@ game.WinScreen = me.ScreenObject.extend({
             this.title = me.loader.getImage("loose");
             // font to display the menu items
             this.font = new me.BitmapFont("32x32_font", 32); 
+            
+            me.audio.stopTrack();
+        me.audio.playTrack("bg_music");
         }
+        
     },
  
     // update function

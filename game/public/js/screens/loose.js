@@ -7,6 +7,7 @@ game.LooseScreen = me.ScreenObject.extend({
         this.title = null;
  
         this.font = null;
+        
     },
  
     // reset function
@@ -17,6 +18,7 @@ game.LooseScreen = me.ScreenObject.extend({
             // font to display the menu items
             this.font = new me.BitmapFont("32x32_font", 32); 
         }
+        
     },
  
     // update function

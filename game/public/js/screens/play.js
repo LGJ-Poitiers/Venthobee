@@ -15,6 +15,8 @@ game.PlayScreen = me.ScreenObject.extend({
  
         // make sure everything is in the right order
         me.game.sort();
+        
+        me.audio.playTrack("bg_music_long");
     },
 	
 	

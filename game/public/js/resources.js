@@ -37,5 +37,7 @@ game.resources = [
     {name: "32x32_font", type:"image", src: "data/img/font/32x32_font.png"},
 	
 	// sound effect
-	{name: "jump", type: "audio", src: "data/sfx/", channel : 2}
+	{name: "jump", type: "audio", src: "data/sfx/", channel : 2},
+	{name: "bg_music", type: "audio", src: "data/sfx/", channel : 1},
+	{name: "bg_music_long", type: "audio", src: "data/sfx/", channel : 1}
 ];
