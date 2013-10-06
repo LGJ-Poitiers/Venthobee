@@ -4,7 +4,10 @@ game.resources = [
     {name: "title",  type:"image", src: "data/img/gui/title.png"},
     
     // sky
-    {name: "Sky",  type:"image", src: "data/img/sprite/sky.png"},
+    {name: "Sky",  type:"image", src: "data/img/map/sky.png"},
+    
+    // town
+    {name: "town",  type:"image", src: "data/img/map/town.png"},
     
     // level tileset
     {name: "lvl1",  type:"image", src: "data/img/map/lvl1.png"},
@@ -12,19 +15,15 @@ game.resources = [
     // map lvl1
     {name: "lvl1", type: "tmx", src: "data/map/lvl1.tmx"},
     
-    //hero
+    // Hero
     {name: "hero", type:"image", src: "data/img/sprite/hero.png"},
-    
-    /*
-     *  Enemy
-     */
+
+    // Enemies
     {name: "note", type:"image", src: "data/img/sprite/sweet_note.png"},
     
-    /*
-     * Bullet
-     */
+    // Bullet
     {name: "bullet", type:"image", src: "data/img/sprite/bullet.png"},
-	 
+    
     //font
     {name: "32x32_font", type:"image", src: "data/img/font/32x32_font.png"},
  
