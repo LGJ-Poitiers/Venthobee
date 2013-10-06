@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="41" height="17" tilewidth="32" tileheight="32" backgroundcolor="#66ffff">
+<map version="1.0" orientation="orthogonal" width="41" height="17" tilewidth="32" tileheight="32" backgroundcolor="#b8add1">
  <tileset firstgid="1" name="lvl1" tilewidth="32" tileheight="32">
   <image source="../img/map/lvl1.png" width="128" height="32"/>
  </tileset>
@@ -21,10 +21,16 @@
    </properties>
   </tile>
  </tileset>
- <imagelayer name="Sky" width="41" height="17">
-  <image source="../img/sprite/sky.png"/>
+ <imagelayer name="Sky" width="41" height="17" y="-100">
+  <image source="../img/map/sky.png"/>
   <properties>
    <property name="ratio" value="0.25"/>
+  </properties>
+ </imagelayer>
+ <imagelayer name="Town" width="41" height="17" y="300">
+  <image source="../img/map/second_plan.png"/>
+  <properties>
+   <property name="ratio" value="0.5"/>
   </properties>
  </imagelayer>
  <layer name="Background" width="41" height="17">
@@ -45,7 +51,6 @@
  <objectgroup name="Entity" width="41" height="17">
   <object name="mainPlayer" x="1253" y="416" width="50" height="92">
    <properties>
-    <property name="flipX" value="true"/>
     <property name="image" value="hero"/>
     <property name="spriteheight" value="92"/>
     <property name="spritewidth" value="50"/>

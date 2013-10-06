@@ -4,7 +4,10 @@ game.resources = [
     {name: "title",  type:"image", src: "data/img/gui/title.png"},
     
     // sky
-    {name: "Sky",  type:"image", src: "data/img/sprite/sky.png"},
+    {name: "Sky",  type:"image", src: "data/img/map/sky.png"},
+    
+    // town
+    {name: "Town",  type:"image", src: "data/img/map/second_plan.png"},
     
     // level tileset
     {name: "lvl1",  type:"image", src: "data/img/map/lvl1.png"},
