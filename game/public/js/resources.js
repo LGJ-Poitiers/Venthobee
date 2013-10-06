@@ -22,8 +22,8 @@ game.resources = [
     {name: "note", type:"image", src: "data/img/sprite/sweet_note.gif"},
     
     // Bullet
-    {name: "bullet", type:"image", src: "data/img/sprite/sweet_note.gif"},
-	 
+    {name: "bullet", type:"image", src: "data/img/sprite/bullet.png"},
+    
     //font
     {name: "32x32_font", type:"image", src: "data/img/font/32x32_font.png"},
  

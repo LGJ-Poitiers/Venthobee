@@ -1,6 +1,6 @@
 var bullet = me.ObjectEntity.extend({
 
-    init: function (x, y) {
+    init: function (x, y, leftP) {
     	
     	settings = {};
     	settings.image = 'bullet';
@@ -8,10 +8,15 @@ var bullet = me.ObjectEntity.extend({
     	
         this.parent(x, y, settings);
         this.collidable = true;
-        //this.accel = 3;
-        //this.gravity = 1;
+        //this.accel = 2;
+        //this.gravity = -0.3;
         //this.setVelocity(8, 10);
+        //this.vel.x = 0;
 		//this.doWalk(left);
+        //this.left = left;
+        this.vel.x = leftP? -20 : 20;
+        this.gravity = (Math.random()-0.5)*1.5;
+        this.startX = this.pos.x;
 
     },
 
@@ -22,18 +27,20 @@ var bullet = me.ObjectEntity.extend({
             me.game.remove(this);
 		}
 		
-		// speed up
-		this.vel.y -= 1;
-		this.vel.x += 1;
-		this.vel.z -= 1;
+		if (Math.abs(this.pos.x - this.startX) >= 400)
+			me.game.remove(this);
+		
 		//this.vel.y -= this.gravity;
 		
 		// check for collision
         var res = me.game.collide(this);
         if (res) {
-        	if( res.obj.isSolid ){
-                me.game.remove(this); 
-            }
+        	//if (res.obj.type != me.game.PLAYER) {
+        		me.game.remove(this);
+	        	if (res.obj.type == me.game.ENEMY_OBJECT) {
+	                me.game.remove(res.obj);
+	        	}
+        	//}
             /*if (res.obj.type == me.game.CHOPPER || res.obj.type == me.game.TANK) {
 				//log points and play sound
                 console.log("bullet hit enemy");
