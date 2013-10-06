@@ -4,17 +4,14 @@ var bullet = me.ObjectEntity.extend({
     	
     	settings = {};
     	settings.image = 'bullet';
-    	//settings.spritewidth = 32;
     	
         this.parent(x, y, settings);
         this.collidable = true;
-        //this.accel = 2;
-        this.gravity = 1;
-        //this.setVelocity(8, 10);
-        //this.vel.x = 0;
-		//this.doWalk(left);
-        //this.left = left;
-        this.vel.x = leftP? -20 : 20;
+        this.vel.x = leftP? - 18 : 18;
+        this.flipX(!leftP);
+        this.gravity = (Math.random()-0.5)*1.5;
+        this.startX = this.pos.x;
+        this.life = 100;
 
     },
 
@@ -25,7 +22,14 @@ var bullet = me.ObjectEntity.extend({
             me.game.remove(this);
 		}
 		
-		this.vel.y -= this.gravity;
+		if (Math.abs(this.pos.x - this.startX) >= 400)
+			me.game.remove(this);
+		
+		this.life-=5;
+		if (this.life <= 0) {
+			me.game.remove(this);
+		}
+		//this.vel.y -= this.gravity;
 		
 		// check for collision
         var res = me.game.collide(this);

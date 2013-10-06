@@ -17,7 +17,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(4, 17);
-        this.updateColRect(10, 29, 0, 86);
+        this.updateColRect(10, 29, 4, 80);
         
         this.renderable.addAnimation("stand", [0, 1, 2], 30);
         this.renderable.addAnimation("walk", [8, 9, 10, 11, 12, 13, 14, 15]);
@@ -33,6 +33,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		this.alwaysUpdate = true;
 		
 		//me.game.viewport.follow(this.pos, me.game.viewport.AXIS.HORIZONTAL);
+		this.life = 1000;
     },
  
     /* -----
@@ -49,7 +50,6 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.flipX(true);
             // update the entity velocity
             this.vel.x -= this.accel.x * me.timer.tick;
-            console.log(this);
             leftP = true;
         } else if (me.input.isKeyPressed('right')) {
         	this.renderable.setCurrentAnimation("walk");
@@ -58,7 +58,6 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.flipX(false);
             // update the entity velocity
             this.vel.x += this.accel.x * me.timer.tick;
-            console.log(this);
             leftP = false;
         } else {
         	this.renderable.setCurrentAnimation("stand");
@@ -75,13 +74,18 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 // set the jumping flag
                 this.jumping = true;
                 // play some audio 
-                //me.audio.play("jump");
+                me.audio.play("jump");
             }
  
         }
         
         if (me.input.isKeyPressed('shoot')) {
-        	shot = new bullet(this.pos.x, this.pos.y+40, leftP);
+        	if (leftP) {
+        		shot = new bullet(this.pos.x+0, this.pos.y+20, leftP);
+        	}
+        	else {
+        		shot = new bullet(this.pos.x+50, this.pos.y+20, leftP);
+        	}
             me.game.add(shot, this.z);
             me.game.sort();
             //me.game.HUD.updateItemValue("score", -1);
@@ -109,6 +113,11 @@ game.PlayerEntity = me.ObjectEntity.extend({
      
                 } else {
                     // let's flicker in case we touched an enemy
+                    
+                    this.life -= 20;
+                    if (this.life <= 0) {
+                    	me.game.remove(this);
+                    }
                     this.renderable.flicker(45);
                 }
             }
