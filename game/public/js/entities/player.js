@@ -18,7 +18,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(4, 17);
-        this.updateColRect(0, 50, -6, 92);
+        //this.updateColRect(0, 50, -6, 92);
         
         
         this.renderable.addAnimation("stand", [0, 1, 2]);
@@ -41,21 +41,21 @@ game.PlayerEntity = me.ObjectEntity.extend({
     update: function() {
  
         if (me.input.isKeyPressed('left')) {
-        	this.renderable.setCurrentAnimation("walk");
+        	//this.renderable.setCurrentAnimation("walk");
         
             // flip the sprite on horizontal axis
             this.flipX(true);
             // update the entity velocity
             this.vel.x -= this.accel.x * me.timer.tick;
         } else if (me.input.isKeyPressed('right')) {
-        	this.renderable.setCurrentAnimation("walk");
+        	//this.renderable.setCurrentAnimation("walk");
         
             // unflip the sprite
             this.flipX(false);
             // update the entity velocity
             this.vel.x += this.accel.x * me.timer.tick;
         } else {
-        	this.renderable.setCurrentAnimation("stand");
+        	//this.renderable.setCurrentAnimation("stand");
             this.vel.x = 0;
         }
         if (me.input.isKeyPressed('jump')) {
