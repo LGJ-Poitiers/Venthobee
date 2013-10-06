@@ -38,7 +38,7 @@ game.resources = [
 	 */
     
     // our enemty entity
-    {name: "note", type:"image", src: "data/img/sprite/sweet_note.gif"},
+    {name: "note", type:"image", src: "data/img/sprite/sweet_note.png"},
 	
 	/* Sound effects. 
 	 *
