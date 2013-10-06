@@ -13,7 +13,7 @@ game.WinScreen = me.ScreenObject.extend({
     onResetEvent: function() {
         if (this.title == null) {
             // init stuff if not yet done
-            this.title = me.loader.getImage("win");
+            this.title = me.loader.getImage("loose");
             // font to display the menu items
             this.font = new me.BitmapFont("32x32_font", 32); 
         }

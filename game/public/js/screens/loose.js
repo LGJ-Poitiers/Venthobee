@@ -13,7 +13,7 @@ game.LooseScreen = me.ScreenObject.extend({
     onResetEvent: function() {
         if (this.title == null) {
             // init stuff if not yet done
-            this.title = me.loader.getImage("loose");
+            this.title = me.loader.getImage("win");
             // font to display the menu items
             this.font = new me.BitmapFont("32x32_font", 32); 
         }
@@ -28,7 +28,7 @@ game.LooseScreen = me.ScreenObject.extend({
     draw: function(context) {
         context.drawImage(this.title, 0, 0);
  
-        this.font.draw(context, "GAME OVER!", 20, 240);
+        //this.font.draw(context, "GAME OVER!", 20, 240);
         //this.font.draw(context, me.game.HUD., 20, 272);
     },
  

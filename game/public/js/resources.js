@@ -1,7 +1,7 @@
 game.resources = [
 
 	// title screen
-    {name: "win",  type:"image", src: "data/img/gui/win.png"},
+    {name: "win",  type:"image", src: "data/img/gui/win.gif"},
     
     // title screen
     {name: "loose",  type:"image", src: "data/img/gui/loose.png"},
