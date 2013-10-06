@@ -88,6 +88,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
                     this.vel.y = -this.maxVel.y * me.timer.tick;
                     // set the jumping flag
                     this.jumping = true;
+                    
+                    // remove enemy if jump on it
+                    me.game.remove(res.obj);
      
                 } else {
                     // let's flicker in case we touched an enemy
