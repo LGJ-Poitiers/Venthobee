@@ -1,10 +1,10 @@
 /* --------------------------
 an enemy Entity
 ------------------------ */
-game.Note = me.ObjectEntity.extend({
+game.darkNote = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         // define this here instead of tiled
-        settings.image = "note";
+        settings.image = "darkNote";
         settings.spritewidth = 32;
         settings.spriteheight = 50;
  

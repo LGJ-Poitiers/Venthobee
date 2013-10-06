@@ -19,16 +19,16 @@ game.resources = [
     {name: "hero", type:"image", src: "data/img/sprite/hero.png"},
 
     // Enemies
-    {name: "note", type:"image", src: "data/img/sprite/sweet_note.png"},
+    {name: "darkNote", type:"image", src: "data/img/sprite/sweet_note.png"},
+    
+    // Coins
+    {name: "sweetNote", type:"image", src: "data/img/sprite/angry_empty_note.png"},
     
     // Bullet
     {name: "bullet", type:"image", src: "data/img/sprite/bullet.png"},
     
     //font
     {name: "32x32_font", type:"image", src: "data/img/font/32x32_font.png"},
- 
-    // our enemty entity
-    {name: "note", type:"image", src: "data/img/sprite/sweet_note.png"},
 	
 	// sound effect
 	{name: "jump", type: "audio", src: "data/sfx/", channel : 2}
